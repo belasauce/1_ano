@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<title>Quiz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/quiz.css">
+<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+<style>
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('img/quiz.jpeg');
+  min-height: 100%;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("img/contact.jpg");
+  min-height: 400px;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button"> HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+	<div class="w3-dropdown-hover">
+		<button onclick="myFunction()" class="dropbtn w3-button"><i class="fa fa-th"></i> HISTORIA</button>
+			<div id="w3-myDropdown" class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="decada50.60.html" class="w3-bar-item w3-button">DÉCADA 50/60</a>
+				<a href="decada70.html" class="w3-bar-item w3-button">DÉCADA 70</a>
+				<a href="decada80.html" class="w3-bar-item w3-button">DÉCADA 80</a>
+				<a href="decada90.html" class="w3-bar-item w3-button">DÉCADA 90</a>
+				<a href="seculoxxi.html" class="w3-bar-item w3-button">SÉCULO XXI</a>
+			</div>
+	</div>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="quiz.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question"></i> QUIZ</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">DECADAS</a>
+    <a href="#contact" class="w3-bbar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Quiz</span>
+  </div>
+</div>
+
+
+	<!--quiz-->
+	
+	<div class="home-box custom-box">
+		<h3>Intruções:</h3>
+		<p>Numero de perguntas:<span class ="total-questions"> 7</span></p> <!-- total de perguntasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss-->
+		<button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+	</div>
+
+	<div class="quiz-box custom-box hide">
+		<div class="question-number">
+		
+		</div>
+		<div class="question-text"	>
+			
+		</div>
+		<div class="option-container">
+		
+		</div>
+		<div class="next-question-btn">
+		<button type="button" class="btn" onclick="next()">Proxima</button>
+		</div>
+		<div class="answers-indicator">
+	
+		</div>
+	</div>
+	
+	<div class="result-box custom-box hide">
+		<h1>Resultado</h1>
+		<table>
+			<tr>
+			<td>Numero de questoes</td>
+			<td><span class="total-question"></span></td>
+			</tr>
+			<tr>
+			<td>Corretas</td>
+			<td><span class="total-correct"></span></td>
+			</tr>
+			<tr>
+			<td>Erradas</td>
+			<td><span class="total-wrong"></span></td>
+			</tr>
+			<tr>
+			<td>Não Respondidas</td>
+			<td><span class="total-missed"></span></td>
+			</tr>
+			<tr>
+			<td>Total</td>
+			<td><span class="total-score"></span></td>
+			</tr>
+		</table>
+		<button type="button" class="btn" onclick="tryagainQuiz()">Tente de novo</button>
+		<button type="button" class="btn" onclick="window.location='index.html';">Sair</button>
+	</div>
+
+<!-- Third Parallax Image with Contact Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Contacte-nos!</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <!--<h3 class="w3-center">Contacte-nos!</h3>-->
+  <p class="w3-center" Style=" font-size: 20px;"><em>Caso tenha alguma duvida não hesite em contactar-nos.</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="img/ua1.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Aveiro, Portgual<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: telmobelasauce@ua.pt<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: bernardo.marcal@ua.pt<br>
+      </div>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+	Telmo Sauce:
+    <a href="https://www.facebook.com/telmo.nicolas.10/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/telmo.sauce/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/SauceTelmo"><i class="fa fa-twitter w3-hover-opacity"></i></a><br>
+    Bernardo Marçal:
+    <a href="https://www.facebook.com/bernardo.amaral.16"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/bennymarcal/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/BennyMarcal_9"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3Schools</a></p>
+</footer>
+
+
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className =" w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+
+</script>
+
+</body>
+</html>

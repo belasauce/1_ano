@@ -1,0 +1,178 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{Guessing Game - Python Edition}
+\def\data{\today}
+\def\autores{Bernardo Marçal, Telmo Sauce}
+\def\autorescontactos{(103236) bernardo.marcal@ua.pt, (104428) telmobelasauce@ua.pt}
+\def\versao{Trabalho de Aprofundamento 2}
+\def\departamento{Departamento de Eletrónica, Telecomunicações e Informática}
+\def\empresa{Universidade de Aveiro}
+\def\logotipo{ua.pdf}
+%
+%%%%%% CAPA %%%%%%
+%
+\renewcommand{\contentsname}{Índice}
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\data}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+\begin{abstract}
+\par A realização deste trabalho teve como objetivo principal, criar um servidor que consiga suportar a geração de um número totalmente aleatório, neste caso entre 0 e 100, e além disso, gerar um número de tentativas, também aleatório, para que o utilizador consiga adivinhar o tal número "secreto", neste caso entre 10 e 30. \par
+Para efetuar este trabalho com sucesso é necessário criar um client, onde o cliente vai tentar adivinhar o número, e um servidor, onde se conecta diretamente com o client. Este servidor nunca deverá aceitar dois "clientes" com o mesmo ID que estejam a jogar simultaneamente. Ao acabar o jogo, ou seja, após ter esgotado as tentativas ou ter acertado no número, o servidor vai gerar um ficheiro report.csv, onde estará escrito todas as estatísticas do utilizador ao concluir o jogo (o seu número secreto, o número máximo de jogadas, o número de jogadas realizadas e o resultado do cliente, seja sucesso, fracasso ou desistência).\par
+Caso tudo corra bem e o cliente consiga acertar com sucesso o número aleatório, aparecerá uma mensagem a congratular o cliente da sua conquista, com o número de tentativas efetuadas, e o mesmo acontecerá se este esgotar o número de tentativas dadas, aparecerá uma mensagem a informar que este não conseguiu descobrir o tal número.
+\end{abstract}
+
+%%%%%% Agradecimentos %%%%%%
+% Segundo glisc deveria aparecer após conclusão...
+%\renewcommand{\abstractname}{Agradecimentos}
+%\begin{abstract}
+%Eventuais agradecimentos.
+%Comentar bloco caso não existam agradecimentos a %fazer.
+%\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+\label{chap.introducao}
+\par Este relatório tem como objetivo analisar as funcionalidades e as funções existentes, tanto do server.py como no client.py, e analisá-las passo a passo para uma melhor compreensão de cada função e o que representa para o funcionamento do código.\par Além deste resumo de cada função destes dois ficheiros, também teremos uma breve mas bastante explicita, explicação de como todo o programa funciona, abordando todos os detalhes e informações necessárias para a total compreensão do programa, explicar como se consegue vencer o jogo, e o que acontece após este acontecimento.\par Concluimos este trabalho explicando alguns dos poucos problemas que nos foram aparecendo ao longo do desenvolvimento do trabalho. 
+
+\chapter{Metodologia}
+\label{chap.metodologia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Neste capítulo vai ser explicado em detalhe a criação dos ficheiros server.py e client.py.
+
+\section{Conteúdo do Server e Cliente}
+
+\subsection{Funcionamento do Servidor}
+ 
+\begin{itemize}
+  \item \textbf{"find\_client\_id"}\space- Esta função lê a lista gamers até encontrar a posição do cliente;
+  \item \textbf{"new\_msg"}\space- Esta função é a base de todo o programa, visto que esta executa outras funções para mais tarde comunicar com o Cliente;
+  \item\textbf{"new\_client"}\space- Esta função cria uma nova lista para o novo jogador, esta lista contêm a Cipher Key, o socket, o número a adivinhar e o número de tentativas;
+  \item\textbf{"clean\_client"}\space- Esta função tem a simples função de eliminar o cliente da lista criada em "new\_client";
+  \item \textbf{"quit\_client"}\space- Esta função atualiza o ficheiro csv, usando a função "update\_file", com a mensagem "QUIT" e elimina o jogador da lista criada em "new\_client", usando a função "clean\_client";
+  \item \textbf{"guess\_client"}\space- Esta função retorna uma mensagem ao cliente a dizer se o numero secreto é maior, menor ou igual a tentativa do jogador;
+  \item \textbf{"stop\_client"}\space- Esta função é executada quando o jogador acaba as suas tentativas ou ganha o jogo. Se o jogador não acertou o número, tendo ficado sem tentativas a função atualiza o ficheiro csv, usando a função "update\_file", com a mensagem "FAILURE". Se o jogador conseguir adivinhar o número, esta atualiza o mesmo ficheiro mas com a mensagem "SUCCESS". No final o cliente é eliminado da lista chamando a função clean\_client;
+  \item \textbf{"create\_file" \space e "update\_file"}\space- Estas são funções que  modificam e criam o ficheiro csv. Create\_file é chamada ao executar "server.py", esta cria um novo ficheiro chamado "report.csv" com o texto.
+  "Gamer,Secret Number,Attempts,Attemps Used,Result". Já a função "update\_file" acrescenta texto ao ficheiro, como no exemplo seguinte, "João,74,11,6,SUCCESS" client id, numero a adivinhar, numero máximo de tentativas e resultado, respetivamente;
+  \item \textbf{"encrypt\_intvalue"\space e "decrypt\_intvalue"} \space- Estas são funções usadas para encryptar e decryptar os valores;
+  \item \textbf{"rec\_key"}\space- Esta função tem como objetivo inserir a Cipher Key na lista do respetivo jogador;
+\end{itemize}
+
+\noindent
+
+\subsection{Funcionamento do Cliente}
+\begin{itemize}
+    \item \textbf{"quit\_action"}\space- Esta função manda mensagem ao Server, onde esta escuta a função "quit\_client"
+    \item \textbf{"run\_client"}\space- Esta é a Interface do nosso jogo e ela que comunica com o Servidor para executar as funções existentes no Server
+    \item \textbf{"str\_Key"}\space- Esta função cria uma Cipher Key para o cliente.
+    \item \textbf{"encrypt\_intvalue"\space e "decrypt\_intvalue"}\space- Estas são funções usadas para encryptar e decryptar os valores.
+\end{itemize}
+\noindent
+
+\section{Execução do programa}
+Após o jogador executar o programa \textbf{"server.py"} no terminal o server cria ficheiro \textit{"report.csv"} chamando a função \textbf{"create\_file"}. Em seguida aparece no terminal as informações do jogo e uma mensagem para o jogador decidir se quer começar o jogo ou sair, para o jogo começar este tem de escrever s/S, para sair este tem que escrever q/Q. Após este começar o jogo, é enviada uma mensagem ao servidor a função \textbf{new\_msg} recebe a mensagem e executa a função \textbf{"new\_client"} onde é criada a lista do nosso jogador. Em seguida a interface do jogo aparece no terminal entrando num \textit{while} até o número de tentativas máximas acabar. Dentro do \textit{while}, é pedido ao jogador para tentar adivinhar o número secreto, cada vez que o jogador introduzir um número é enviada uma  mensagem ao server, que é recebida por \textbf{new\_msg}, que chama a função \textbf{guess\_client}, esta após comparar o número a adivinhar e a adivinha do jogador, é retornado uma mensagem ao cliente caso esta seja mais pequeno aparece no terminal a mensagem "Try a smaller number" caso seja maior aparece a mensagem "Try a larger number", estas funções e a mensagem são chamadas uma a seguir a outra, até que o numero seja igual ou as tentativas acabarem ou até se o jogador pretender desistir do jogo, se este pressionar q/Q o jogo acaba, neste caso o \textbf{new\_msg} executa a função \textbf{quit\_client} limpando o jogador da lista gamers e atualizando o report com a mensagem \textit{"QUIT"}. Caso o jogador adivinhe o numero secreto a mensagem que a função \textbf{guess\_client} retorna é "equals" e de seguida aparece no terminal a mensagem \textit{"Good job! You guessed the number in only (numero de tentativas)"} e é enviada uma mensagem ao servidor, recebida por \textbf{new\_msg} e que redireciona para \textbf{stop\_client} como o jogador ganhou o jogo a função \textbf{update\_file} executa escrevendo a mensagem de \emph{"SUCCESS"} no report e em seguida o jogo acaba com o comando \textit{"exit(0)"}. Por fim, caso o jogador não consiga adivinhar o número nas tentativas que lhe são oferecidas, o jogo acaba, enviando uma mensagem para o server, esta mensagem é recebida por \textbf{new\_msg} e esta executa \textbf{stop\_client} que chama a função \textbf{update\_client} e atualiza o ficheiro csv com a mensagem \emph{"FAILURE"} acabando com o jogo ao executar \textit{"exit(0)"}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusões}
+\label{chap.conclusao}
+Caso o trabalho tenha corrido perfeitamente, o jogador começaria o jogo e teria a escolha de poder encryptar a comunicação dos números entre o Cliente e o Servidor, desta forma este teria maior privacidade.No entanto tivemos problemas técnicos na desencriptação do numero no servidor, por esta razão tivemos de retirar esta funcionalidade do jogo, comentando grande parte do código relacionado com a encriptação. Para além destes imprevistos, pensamos ter seguido bem as instruções no guião, realizado desta forma o jogo da maneira que era previsto.
+
+\chapter*{Dados dos Autores}
+\subsection{CODE UA}
+Aqui encontra-se o link para o repositório onde está toda a informação sobre este trabalho :
+\begin{itemize}
+\item https://code.ua.pt/projects/labi2021-ap2-g14/repository
+\end{itemize}
+\subsection{Contribuição dos Autores}
+\ac{bm} - 50\%\par
+\noindent
+\ac{ts} - 50\%\par
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acrónimos}
+\begin{acronym}
+\acro{ua}[UA]{Universidade de Aveiro}
+\acro{miect}[MIECT]{Mestrado Integrado em Engenharia de Computadores e Telemática}
+\acro{lei}[LEI]{Licenciatura em Engenharia Informática}
+\acro{glisc}[GLISC]{Grey Literature International Steering Committee}
+\acro{bm}[BM]{Bernardo Marçal}
+\acro{ts}[TS]{Telmo Sauce}
+\end{acronym}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}

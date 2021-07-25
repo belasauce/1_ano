@@ -1,0 +1,68 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {portuguese}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}A história dos jogos eletrónicos}{2}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Década de 50 - O Começo}{2}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Década de 60 - Tempos Revolucionários}{2}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Década de 70 - Crescimento da Indústria}{3}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Consolas}{3}{subsection.2.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Jogos}{3}{subsection.2.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Space Invaders}{3}{section*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Easter Eggs}{3}{subsection.2.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Década de 80 - Criação de Ícones}{4}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Primeiras consolas portáteis}{4}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Game \& Watch}{4}{section*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Game Boy}{5}{section*.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Jogos}{5}{subsection.2.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pac-Man e Franquias}{5}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Donkey Kong}{6}{section*.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Frogger e Freeway}{7}{section*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mario Bros.}{7}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Super Mario Bros.}{8}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Tetris}{8}{section*.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{The Legend of Zelda}{9}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Fighting Street}{10}{section*.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Final Fantasy}{10}{section*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Década de 90 - O Monopólio do Sucesso}{10}{section.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Sucessor dos Cartuchos}{11}{subsection.2.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Quinta Geração(34/64 bits)}{11}{subsection.2.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Século XXI - Evolução Exponencial}{12}{section.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.1}Sexta Geração}{12}{subsection.2.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Consolas}{12}{section*.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Consolas Portáteis}{12}{section*.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.2}Sétima Geração}{12}{subsection.2.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.3}Oitava Geração - Presente}{12}{subsection.2.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.4}Presente - Jogos mais populares}{12}{subsection.2.6.4}%

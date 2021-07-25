@@ -1,0 +1,459 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{txfonts,graphicx}
+\usepackage{wrapfig}
+
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{A Evolução dos Jogos Eletrónicos}
+\def\data{19 de dezembro de 2020}
+\def\autores{Telmo Sauce, Bernardo Marçal}
+\def\autorescontactos{(104428) telmobelasauce@ua.pt, (103236) bernardo.marcal@ua.pt}
+\def\versao{VERSAO 1}
+\def\departamento{DETI}
+\def\empresa{Universidade de Aveiro}
+\def\logotipo{ua.pdf}
+\def\jogomario{mario.jpg}
+\def\jogopacman{PacMan.jpg}
+\def\jogozelda{Zelda.jpg}
+\def\jogofightingstreet{FightingStreet.jpg}
+\def\jogotetris{Tetris.jpg}
+\def\jogofreeway{Freeway.jpg}
+\def\jogodonkeykong{DonkeyKong.jpg}
+\def\jogofrogger{Frogger.JPG}
+\def\gameboy{Gameboy.jpg}
+\def\jogosupermario{Supermario.jpg}
+
+
+%
+%%%%%% CAPA %%%%%%
+%
+\renewcommand{\contentsname}{Índice}
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\data}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+\begin{abstract}
+Os jogos tem vindo cada vez mais a fazer parte do nosso dia a dia, havendo cada vez empregos na industria, e cada vez mais pessoas que necessitam deste para  relaxar a seguir de um dia de stress.
+
+Por esta razão decidimos abordar este tema para conhecermos melhor sobre o passado desta industria que anda a crescer bastante nas ultimas décadas, influenciando cada vez mais o nosso dia a dia.
+
+Decidimos dividir a historia dos jogos de forma cronológica, começando a falar sobre alguns dos primeiros jogos criados ate ao aparecimento de um dos primeiros êxitos, "SpaceWars!". 
+
+Ate a altura grande parte dos jogos rodavam em osciloscópio, mas na década de 70 apareceram as primeiras consolas, que começou a ser desenvolvida por Ralph Baer e mais tarde o trabalho deste foi vendido a Magnox que acabou o projeto de Baer. Nesta década surgiu outro grande êxito Space Invaders este n tem comparação com SpaceWars! visto que na altura a industria já tinha crescido bastante.
+
+Algo que marcou bastante os jogos foram os Easter Eggs que também surgiram na década de 70 e que atualmente aparecem em quase todos os jogos mesmo filmes.
+
+A década de 80 foi bastante importante pois neste ano surgiram um enorme variedade de jogos e que atraíram um grande publico, e que criaram inúmeras memorias aos nossos pais e avós, alguns deste jogos são Mario Bros, Tetris, entre outros. Para alem destes jogos também surgiram as consolas portáteis, como o Game Boy.
+
+Com este trabalho esperamos que conheça melhor a historia desta monstruosa industria e que esta continue a trazer muitas memorias a cada um de nos como trouxe aos nossos professores, irmãos e pais (\cite{geral}).
+
+
+\end{abstract}
+
+%%%%%% Agradecimentos %%%%%%
+% Segundo glisc deveria aparecer após conclusão...
+\renewcommand{\abstractname}{Agradecimentos}
+\begin{abstract}
+Para começar, queríamos agradecer aos professores de Labi da \ac{ua} por não nos terem limitado a escolha de um tema, dando nos desta maneira, liberdade para escolher um tópico ao nosso gosto e além disto descobrir e aprofundar mais o nosso conhecimento acerca dum tópico que nos agradasse e interessasse.
+
+Por fim, gostaríamos de agradecer aos nossos tutores e colegas de anos anteriores por nos terem ajudado quando estávamos com problemas técnicos e criativos.
+\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+\label{chap.introducao}
+Em primeiro lugar, optamos por este tema pois os jogos têm vindo cada vez mais influenciar as nossas vidas, principalmente das gerações mais novas.
+
+Em segundo lugar é um tópico em que nos sentimos mais confortáveis a falar e que nos interessa. Fazendo deste um trabalho mais divertido para nós e esperamos que também seja didático e de fácil compreensão para todos.
+
+Em suma, com este trabalho pretendemos contar a Historia dos jogos e do quão surpreendente é a sua evolução nas últimas décadas. Também planeamos mostrar a sua importância, não só para atividades lúdicas, mas também, para fonte de rendimento, seja em investimentos ou mais recentemente, torneios dos mesmos.
+
+\chapter{A história dos jogos eletrónicos}
+\label{chap.A história dos jogos eletrónicos}
+
+
+\section{Década de 50 - O Começo}
+\label{sec.Década de 50 - O Começo}
+Os jogos eletrónicos começaram a ser desenvolvidos desde a criação do primeiro (1951) computador. Mas inicialmente eram limitados a estudos da interação homem-computador e para treino de estratégia militar devido ao custo elevado, consumo de energia, e dificuldade em empregar uma equipa treinada.
+
+Devido a falta de documentação é difícil dizer qual foi o primeiro jogo criado. Mas podemos afirmar que tanto o \textit{Nimrod (1951)} e o \textit{EDSAC (1952)} foram dois computadores criados especificamente para serem os cérebros dos primeiros jogos, estes são, respetivamente, o \textit{Nim0} (um jogo matemático criado na antiga China para dois jogadores) e o \textit{OXO} (uma réplica digital dum dos jogos mais conhecidos de sempre, o Jogo do Galo). Mais tarde, foi criado o Hutspiel,  um jogo de guerra construído pelo exército dos Estados Unidos para simular a guerra com a União Soviética na Europa.
+
+\section{Década de 60 - Tempos Revolucionários}
+\label{sec.Década de 60 - Tempos Revolucionários}
+O Instituto de Tecnologia de Massachusetts era um dos principais centros de pesquisa na década de 1960. Criou o computador \textit{TX-0} (computador que utilizava transístores em vez de válvulas).
+
+Este computador atraiu um grupo de estudantes de engenharia. Estes desenvolveram ferramentas de programação e alguns jogos, como \textit{Mouse in the Maze} (que simulava um rato num labirinto) e o \textit{Jogo do Galo}.
+
+Mais tarde, este computador foi substituído pelo \textit{PDP-1}, que possuía um monitor com resolução de 512 x 512 e, ao contrário do \textit{TX-0}, este poderia ser ligado instantaneamente.
+
+Neste PC foi criado SpaceWar! o primeiro jogo de tiro e um dos primeiros jogos a ser reconhecido nacionalmente. Este jogo permitia dois jogadores simularem uma batalha espacial, um contra o outro.
+
+
+\section{Década de 70 - Crescimento da Indústria}
+\label{sec.Década de 70 - Crescimento da Indústria}
+Esta década é marcada pelo aparecimento das primeiras consolas e pelo crescimento da indústria dos videojogos, tendo aparecido muitas mais empresas no mercado e o crescimento do interesse da população por esta.
+
+\subsection{Consolas}
+\label{subsec.Consolas}
+No ano de 1966,o engenheiro Ralph Baer foi encarregado pela \textbf{Sanders Associates}, para desenvolver a melhor televisão do mundo. Este inicialmente pretendia criar uma TV interativa com jogos, mas esta ideia não teve sucesso. Dois anos mais tarde desenvolveu \textit{Brown Box} um protótipo que mais tarde foi comprado pela \textit{Magnox}, em 1971. No ano seguinte foi lançada \textit{Odyssey 100}, a primeira consola digital, onde se podia jogar \textit{Magnavox Odyssey}, o primeiro jogo para ser conectado na TV.
+
+Em 1977, com a liderança de \textbf{Bushnell}, a \textit{Atari} desenvolveu  \textit{VCS} ou \textit{Atari2600} esta foi a primeira consola a ter jogos em cassetes. Apesar desta ser bastante inovadora para a altura, o público não sentiu atração ao produto de imediato, visto que os jogos que se podiam jogar nela eram todos baseados no \textit{Pong} e o publico já estava exausto desta estética.
+
+\subsection{Jogos}
+\label{subsec.jogos}
+Em 1971, foi lançado o \textit{Pong}, pela \textit{Atari}. Este jogo deu início a um novo sector da indústria dos jogos. Foi criado por \textit{Nolan Bushnell} e \textit{Ted Dabneyera } e este consistia numa consola ligada a uma TV que necessitava de moedas para ser jogada(Maquina Arcade)   . Foi estimado que este jogo lucrava 35\$ a 40\$ por dia, um valor bastante elevado para altura, dentro da área do entretenimento. O jogo ficou tão popular que as pessoas dirigiam-se aos cafés apenas para poderem jogar.
+
+\subsubsection{Space Invaders}
+\label{subsubsec.Space Invaders}
+Em 1978, foi lançado icónico Space Invaders, desenvolvido pela \textbf{Taito} que o licenciou a Atari e que mais tarde foi licenciado para uso em casa. Este jogo foi tao popular no Japão, que fez com que houvesse falta de moedas de 100 ienes, obrigando a Casa da Moeda Japonesa a fabricar lotes extra. Teve tanto sucesso pois era inovador. Por exemplo este foi o primeiro jogo a gravar a pontuação dos jogadores anteriores,os alienígenas eram animados movendo os seus tentáculos enquanto se moviam, para alem disto este jogo não tinha um tempo limitado, o tempo do jogo dependia apenas na habilidade de cada jogador.
+
+\subsection{Easter Eggs}
+\label{subsec.Easter Eggs}
+Nesta década também surgiu o  primeiro Easter Egg. Como a Atari tinha uma política de não dar grande valor às pessoas envolvidas no desenvolvimento dos jogos, Warren Robinett, criador de Adventure, decidiu criar uma sala secreta onde estava escrito \textit{"Created by Warren Robinett"}, como forma de reconhecimento pelo seu trabalho. Mais tarde, a existência dos Easter Eggs tornou-se obrigatória.~
+
+\section{Década de 80 - Criação de Ícones}
+\label{sec.Década de 80- Criaçao de Icones}
+Nesta década foi uma era de criação de ícones na historia dos jogos como Pac-Man, Donkey Kong, Super Mario Bros, Tetris,  \textit{The Legend of Zelda}, entre outros.
+
+No Inicio da década foi lançado a primeira consola portátil chamada de \textit{Game \& Watch}. Esta consola marcou o inicio da jornada da Nintendo, até o topo da industria.
+Para além disto surgiu o Crash de 1983, nos EUA, que foi causado pela ascendência dos computadores pessoais, nas más decisões da Atari e saturação do mercado. Nos anos anteriores tinham sido fundadas muitas empresas para desenvolvimento de vídeo jogos e por esta razão havia inúmeras opções de vídeo jogos e consolas que acabavam por ser todos iguais, por esta razão o publico acabava por se cansar dos produtos pois havia pouca variedade. Neste ano a Atari , que liderava a industria ,chegou a perder 356 milhões \$ e a perder mais de 50 porcento do seus funcionários.
+
+Em 1983, foi lançado \textit{Famicom (NES)} que foi bastante popular no Japão.No entanto em 1985, ano de lançamento da consola no EUA, esta não foi tanto popular pelo desinteresse do publico na industria. Já no ano seguinte a consola bateu os 3 milhões de vendas nos EUA.O sucesso da consola repetiu-se nos anos seguintes tendo superado cada ano o numero de vendas do ano anterior. Esta consola tinha uma particularidade, os seus comandos já não eram joysticks como as outras, eram comandos parecidos com os usados atualmente. A "NES" ajudou a Nintendo a dominar ainda mais o mercado. Esta chegou a vender dez vezes mais que as empresas competidoras. A seguir ao lançamento da NES a Nintendo não abrandou lançando no ano de 1989 o Game Boy.
+
+
+\subsection{Primeiras consolas portáteis}
+\label{subsec.Primeiras consolas portáteis}
+\subsubsection{Game \& Watch}
+\label{subsubsec.Game & Watch}
+ No ano de 1980, Gunpei Yokoi, lança Game \& Watch a primeira linha de consolas portáteis da Nintendo, este afirmou ter tido esta ideia após ver um jovem a jogar numa calculadora. Esta foi o primeiro sucesso da Nintendo tendo sido produzida ate o ano de 1991, ano em que o Game Boy ficou popular.
+ 
+ Cada Consola tinha apenas um ou dois jogos dependendo do modelo e um ecrã (algumas tinham dois). A partir de 1982, o comando passou a ser em cruz influenciando futuros designs de consolas e joysticks da Nintendo. 
+ Uma curiosidade, a Nintendo DS tem um design de dois ecrãs por influencia de algumas versões do Game \& Watch.\\
+ 
+ Durante os seus anos de gloria apenas foram lançados 10 versões:
+ \begin{enumerate}
+     \item Silver (1980)
+     \item Gold (1981)
+     \item Multi Screen (1982–1989)
+     \item Tabletop (1983)
+     \item Panorama (1983–1984)
+     \item New Wide Screen (1982–1991)
+     \item Super Color (1984)
+     \item Micro Vs. System (1984)
+     \item Crystal Screen (1986)
+     \item Nintendo Mini Classics (1998)
+ \end{enumerate}
+ 
+ \subsubsection{Game Boy}
+\label{subsubsec.Game Boy}
+ O Game Boy foi outro grande sucesso da Nintendo. Começou a ser desenvolvido em 1986 por Gunpei Yokoi(criador de Game \& Watch). Esta consola foi desenvolvida com o objetivo de combinar os jogos da NES com a portabilidade da Game \& Watch, visível na \autoref{game}. Este objetivo foi alcançado, e em 1989 foi lançado a primeira versão do Game Boy tendo vendido em apenas 3 anos 32 milhões de unidades.
+ 
+ O Game Boy foi uma evolução muito grande em relação ao Game \& Watch. Neste podia se jogar uma grande variedade de jogos com a criação de cartuchos , também era possível jogar com um amigo com o cabo \textbf{Game Link} que se ligava às consolas dos outros, por fim a autonomia desta consola era de 20 horas, o que comparado com a Game \& Watch era uma grande diferença.
+ 
+ \begin{figure}[h]
+\center
+\includegraphics[width=5cm]{\gameboy}
+\caption{O original e muito adorado, Nintendo Game Boy \cite{gameboy}}
+\label{game}
+\end{figure}
+
+
+
+\subsection{Jogos}
+\label{subsec.jogos2}
+\subsubsection{Pac-Man e Franquias}
+\label{subsubsec.Pac-Man e franquias}
+\textbf{Pac-Man} , \autoref{pac} , foi criado por Toru Ywatami no Japão, em 1980. Neste época a maior parte dos jogos que eram desenvolvidos eram jogos de tiro, mas este desenvolvedor da Nanco queria mudar um pouco, tendo inspiração para a personagem do seu jogo uma pizza sem fatia. Inicialmente o jogo chamava se de \textbf{Puck-Man}, mas quando o jogo foi lançado nos EUA, a  Namco optou por chama-lo, pela maneira que nós atualmente conhecemos, de \textbf{Pac-Man}, para que esta n fosse confundida com o palavrão inglês "f**k".
+
+Apesar deste ter sido lançado no Japão, este só ficou popular com a chegada aos EUA. Na primeira década deste jogo, foi acumulado um total de 1 bilião\$, apenas em Maquinas Arcade. Atualmente, o jogo já acumulou 13 biliões\$, ficando atrás de Space Invaders por apenas um bilião.
+
+\textit{Ms. Pac-Man}, e de uma certa forma uma versão melhor de Pac-Man, inicialmente chamado de \textit{Crazy Otto} e que mais tarde foi comprado pela \textit{Midway} e publicado pela mesma com o nome Ms. Pac-Man.
+
+Nos anos seguintes são lançadas muitas mais versões do jogo, sendo a mais famosa  Pac Man Plus, em que as frutas e outros elementos do jogo são trocados por símbolos da cultura norte-americana como hambúrgueres e latas de coca-cola.
+
+\begin{figure}[h]
+\center
+\includegraphics[width=5.3cm]{\jogopacman}
+\caption{Pac-Man, versão original da Atari \cite{pacman}}
+\label{pac}
+\end{figure}
+
+
+\subsubsection{Donkey Kong}
+\label{subsubsec.Donkey Kong}
+\textbf{Donkey Kong} foi criado em 1981, por  Shigeru Miyamoto. O jogo consiste em "Jump Man" desviar se de obstáculos lançados por Donkey Kong para poder salvar Pauline, a mulher desejada por "Jump Man", como podemos observar na \autoref{kong}.
+
+A Nintendo na altura passava por alguns problemas financeiros, e com o sucesso deste jogo a empresa pôde continuar a trazer-nos jogos fantásticos e revolucionários como este.
+Donkey Kong não só contribuiu para o equilíbrio financeiro da Nintendo, mas também trouxe dois personagens que mais tarde se tornariam personagens de outros jogos, Pauline se tornou a princesa \textit{Peach} e "Jump Man", um dos personagens mais conhecidos se não o mais conhecido, \textit{Mario} .
+
+\begin{figure}[h]
+\center
+\includegraphics[width=5cm]{\jogodonkeykong}
+\caption{Jump Man a tentar salvar Pauline em Donkey Kong (1981) \cite{donkeykong}}
+\label{kong}
+\end{figure}
+
+\subsubsection{Frogger e Freeway}
+\label{subsubsec.Frogger e Freeway}
+\textit{Frogger}, criados por Ed English, David Lamkins o Jogador tem de fazer um sapo atravessar o rio e uma estrada, um jogo simples e viciante (\autoref{frog}).
+
+\textit{Freeway} ,criado por David Crane, o conceito deste jogo é bastante parecido a Frogger, mas desta vez o jogador tem como objetivo fazer uma galinha atravessar a estrada o maior numero de vezes possível. Na altura, caso um jogador marcasse mais de 20 pontos nos níveis mais difíceis, a Activision oferecia-lhe um patch (Adesivo de condecoração) especial.
+
+\begin{figure}[h]
+\center
+\includegraphics[width=4cm, height=3cm]{\jogofrogger}
+\includegraphics[width=4cm, height=3cm]{\jogofreeway}
+\caption{Frogger e Freeway, os clássicos do Arcade (1981) \cite{atari}}
+\label{frog}
+\end{figure}
+
+\subsubsection{Mario Bros.}
+\label{subsubsec.Mario Bros.}
+Como já foi mencionado anteriormente, Mário apareceu pela primeira vez em Donkey Kong, com o nome de \textit{Jumpman} que mais tarde foi mudado porque alguns funcionários da Nintendo viram algumas parecenças deste personagem com um dos seus colegas, Mario Segali, então decidiu se batizar este personagem como Mario (\autoref{mario}).
+
+Mais alguma curiosidades, O bigode e o chapéu de Mario foram criados para disfarçar a qualidade fraca nos gráficos, pois os gráficos em 8-bit não permitem que o cabelo e a boca do personagem fiquem bem feitos,e por esta razão decidiram tapá-los com o chapéu e o bigode. Em Mario Bros, os jogadores controlam Mario e caso estejam em multijogador, o jogador número dois controla o seu irmão \textit{Luigi}, os jogadores têm como objetivo salvar a namorada Pauline do gorila Donkey Kong.
+
+\begin{figure}[h]
+\center
+\includegraphics[width=6cm, height=4cm]{\jogomario}
+\caption{Versão original de "Mario Bros.", com Mario e Luigi (1983) \cite{mariobros}}
+\label{mario}
+\end{figure}
+
+\subsubsection{Super Mario Bros.}
+\label{subsubsec.Super Mario Bros.}
+Super Mario Bros (\autoref{super}), foi lançado dois anos a seguir ao lançamento de Mario Bros, desta vez Mario e Luigi (caso esteja a ser jogado em multijogador) têm de resgatar a princesa Peach das mãos do famoso vilão desta franquia \textit{Bowser} e ao contrário da versão anterior os jogadores têm a possibilidade de eliminar os seus inimigos saltando para cima destes.
+
+\begin{figure}[h]
+\center
+\includegraphics[width=6.5cm, height=3cm]{\jogosupermario}
+\caption{Primeiro nível de Super Mario Bros. (1985) \cite{mariobros}}
+\label{super}
+\end{figure}
+
+\subsubsection{Tetris}
+\label{subsubsec.Tetris}
+Tetris foi desenvolvido por Alexey Pajitnov, no ano de 1984, inicialmente tinha como objetivo testar o desempenho do computador onde rodava e ao mesmo tempo para divertir-se enquanto o fazia, mas mais tarde este viu que o jogo era bastante divertido e, além disso, viciante. Mesmo Alexey Pajitnov não conseguia parar de jogar afirmando, "I couldn't stop myself from playing this prototype version, because it was very addictive to put the shapes together". O jogo tornou-se de imediato popular entre programadores e mais tarde, ao ser adaptado para outros computadores como o "IBM PC" também se tornou famoso entre o povo,"It was like a wood fire. Everyone in the Soviet Union who had a PC had Tetris on it," disse Pajitnov. Esta adaptação foi feita por Vadim Gerasimov, atual funcionário da Google, e que na altura era um simples aluno de 16 anos. Apesar de o jogo ser tão popular, era difícil criar um jogo para o mercado, visto que a Guerra Fria estava a decorrer nesta época, apenas por volta 1986 é que foi decidido começar a ganhar dinheiro com o jogo, por isso Alexey Pajitnov começou a pesquisar como poderia vender os direitos do Tetris pelo estado.
+
+A partir dai o jogo não parou de crescer sendo mais um ícone da industria. 
+
+\begin{figure}[h]
+\center
+\includegraphics[width=6cm, height=3cm]{\jogotetris}
+\caption{Primeira versão de Tetris (1984) \cite{tetris}}
+\label{tetris}
+\end{figure}
+
+
+\subsubsection{The Legend of Zelda}
+\label{subsubsec.The Legend of Zelda}
+\textbf{The Legend of Zelda} é um \ac{rpg} que foi desenvolvido por Shigeru Miyamoto, no ano de 1986. O jogador controla Link, um rapaz de túnica verde que pertence à raça Hylian, pessoas de orelhas bicudas como os elfos, este tem como objetivo salvar a princesa Zelda, de Hyrule, e salvar o reino do malvado Ganon.
+
+Shigeru Miyamoto afirmou que a ideia para a criaçao do jogo veio das lembranças de aventuras que este teve em criança enquanto explorava a floresta, cavernas na redondeza.
+
+The Legend of Zelda torna-se um jogo importante para a sua época visto que este é o primeiro jogo a usar um sistema de salvamento, esta funciona através duma bateria embutida no seu cartucho. O jogo oferece três slots de 33 save. Quando utilizador voltar a jogar, este recomeçará onde acabou a sua última sessão, começando com 3 corações apenas.
+
+Além disto, Shigery Miyamoto, numa entrevista para a \textit{Gamestop} explicou um pouco mais detalhadamente de como surgiu o pensamento para criar este jogo, este disse:    \\     -“When I was a child, I went for a walk in the woods, and by my surprise I found a beautiful lake, I was trully amazed by what I had found alone. After a few years, when I was older, I tried to travel through the whole country without a map, and throughout my journey I found amazing things, and one of them is how to face an Adventure”
+
+O jogo vendeu mais de 6.5 milhões de copias e deu inicio a mais uma franquia que tem vindo a influenciar jovens e adultos a entrar na industria. Este é considerado por muitos um dos melhores RPGs da historia. 
+
+\begin{figure}[h]
+\center
+\includegraphics[width=7cm]{\jogozelda}
+\caption{Versão Original de "The Legend of Zelda" (1986) \cite{legendofzelda}}
+\label{Fig.5}
+\end{figure}
+
+\break
+\subsubsection{Fighting Street}
+\label{subsubsec.Fighting Street}
+Este jogo foi desenvolvido por Takashi Nishiyama e por Hiroshi Matsumoto no ano de 1987. O jogador joga com o personagem \textit{Ryu} e tem como objetivo derrotar 10 inimigos e vencer um torneio. Os jogadores tem oportunidade de jogar com um amigo e este é Ken americano e rival de Ryu.
+
+O jogo ficou bastante popular pois era bastante complexo e revolucionário para a altura, visto que o protagonista tinha muitos movimentos (\autoref{street}), como, por exemplo um soco fraco mas rápido, um forte mas lendo e um intermédio. Para além disto, os botões não serviam para clicar, estes tinham um sensor que captava a intensidade dos socos e dos pontapés. Mais tarde estes botões tiveram de ser substituídos por 6 botões, onde cada um representava a intensidade dos socos e pontapés, pois as maquinas tinham de ser arranjadas muito frequentemente e havia muitas queixas de jogadores com dores a após jogar.
+
+\begin{figure}[h]
+\center
+\includegraphics[width=7cm]{\jogofightingstreet}
+\caption{Fighting Street (1987) \cite{streetfighter}}
+\label{street}
+\end{figure}
+
+\subsubsection{Final Fantasy}
+\label{subsub.Final Fantasy}
+Final Fantasy e um RPG desenvolvido por Hinorobu Sakaguchi, com o objetivo de salvar a Square Soft, pois esta empresa estava quase na falecia portanto dependia do sucesso deste jogo para continuar no mercado.
+
+Este foi lançado em 1987 e foi um sucesso, tendo vendido cerca de 400 mil copias. A historia do jogo roda entorno de um grupo de heróis que tem de enfrentar um vilão, no entanto o jogo também foca na vida pessoal de cada uma e, de como estas chegaram onde estão (\cite{finalfantasy}).
+
+\section{Década de 90 - O Monopólio  do Sucesso}
+\label{sec.Década de 90 - O Monópolio do Sucesso }
+Em 1989, a Sega estreou a sua nova consola, nos EUA, Mega Drive, esta custava 189\$ e vinha com um comando e um jogo, chamado de \textit{Altered Beast}. Apesar desta ser melhor que a consola da Nintendo, não teve muito sucesso no começo. No entanto nos anos seguintes a Sega mudou a sua estratégia de marketing. A primeira mudança foi a diminuição do preço da consola para 149\$ ,a outra foi a substituição do jogo Altered Beast, por Sonic The Hedgehog. O sucesso desta consola dependia do sucesso do novo jogo.
+
+O jogo foi criado por Yuki Naka, este pretendia desenvolver um jogo parecido com Super Mario Bros, mas com um nível de dificuldade menor e ao ao contrario dos jogos de Mario de ritmo, Sonic teria um ritmo rápido obrigando o jogador a ter reflexos rápidos. Quando este foi lançado teve muito sucesso.
+
+\subsection{Sucessor dos Cartuchos}
+\label{subsec.Sucessor dos Cartuchos}
+A Sega e a Nintendo dominavam a industria dos jogos nos anos 90, ambas foram obrigadas a investir na nova forma de de armazenamento chamada \ac{cd-rom}.
+Com o aparecimento deste CDs a Sony decide entrar no mercado, auxiliando a Sega lançar a sua nova consola Mega-CD (Sega-CD nos EUA), em 1992 por 299\$. Esta consola tinha trezentos e vinte vezes mais espaço, que as consolas anteriores, visto que cada cartucho armazenava cerca de oito a dezasseis Megabits e apenas um CD conseguia armazenar seiscentos e quarenta Megabytes.
+A Nintendo também tentou lançar a a sua consola com parceria com a Sony, mas mais tarde esta anuncia parecia com outra empresa, Philips. A Sony não se afeta por este acontecimento continuando a produzir a sua própria consola, Play Station lançada a 1994.
+
+\subsection{Quinta Geração(34/64 bits)}
+\label{subsec.Quinta Geração}
+Esta geração foi marcada pelas consolas das 3 empresas que reinavam o mercado da altura \cite{quintageracao}:
+ \begin{itemize}
+     \item \textbf{Sega Saturn} (1994), foi muito popular no Japão com uma campanha de marketing bem sucedida, no entanto não conseguiu disputar com os seus rivais na América e na Europa visto que estas desenvolviam jogos 3D e a consola da Sega era desenvolvida apenas para jogos 2D. Chegou a vender cerca de 9,5 milhões de unidades
+     \item \textbf{PlayStation} (1994), nasceu de uma pareceria fracassada entre a Sony e a Nintendo. Esta teve grande sucesso devido a grande variedade de jogos, visto que teve bastante ajuda varias desenvolvedores de jogos tais como \textbf{Namco} (que desenvolveu Tekken e Ridge Racer), \textbf{Square} (Final Fantasy, Chrono Cross) e \textbf{Konami} (Metal Gear Solid, Castlevania: Symphony of the Night).Esta foi a consola mais popular vendendo cerca de 103 milhões de unidades (\cite{playstation}).
+     \item \textbf{Nintendo 64} (1996), foi a única consola a não adaptar para os novos CD-ROM, por esta razão muitos dos seu desenvolvedores pararam de fazer jogos para esta, limitando o numero de jogos. Mesmo assim conseguiu vender 33 milhões de unidades.
+     
+     
+ \end{itemize}
+ 
+\section{Século XXI - Evolução Exponencial}
+\label{sec.Seculo XXI - Evoluçao Exponecial}
+\subsection{Sexta Geração}
+\label{sub.sexta geraçao}
+\subsubsection{Consolas}
+\label{subsub.consolas2}
+A geração dos 128 bits começou com o lançamento da Sega Dreamcast, no ano de 1998. Apesar desta ter começado bem no seu lançamento, as suas vendas desceram drasticamente com o anuncio do lançamento da nova consola da Sony, Play Station 2, para o ano 2000. Esta conseguia processar dezasseis milhões de polígonos por segundo, para além disto também possibilitava reprodução de filmes. A Playstation 2, vendeu cerca de 120 milhões de consoles num espaço de tempos de 7 anos.
+
+Evidentemente, a Nintendo não podia ficar para trás, lançando um consola de ultima geração, Nintendo GameCube, em 2001. Esta conseguiu vender cerca de 2,7 milhões de unidades e tinha uma particularidade, os seus jogos seriam lançados em mini-CDs com capacidade de 1,5 gigabytes, para dificultar o seus jogos serem pirateados.
+
+Em 2001, nasce um novo rival a Microsoft, com a sua consola \textbf{Xbox} \cite{XBox}. Apesar desta ser nova na industria, consegue se posicionar em segundo lugar nas vendas, com 25 milhões de unidades.
+
+\subsubsection{Consolas Portáteis}
+\label{subsub.consolas Portateis}
+Em 2004 a Nintendo e a Sony lançam novas consolas portáteis, a Nintendo DS, com ecrã duplo, ecrã touch e microfone e a PSP que podia reproduzir filmes e tocar musicas.
+
+\subsection{Sétima Geração}
+\label{sub.setima geraçao}
+A sétima geração é marcada pelo lançamento da nova consola da Microsoft \textbf{Xbox 360}, esta consola competiu com a \textit{Play Station 3} e a \textit{Wii} da Nintendo.
+
+A \textbf{Wii} destruiu os adversários, com cerca de  101 milhões de unidades vendidas. Este feito só foi possível devido a nova dinâmica introduzida neste console, um simples comando com sensor de movimento, que dava uma liberdade ao jogador inédita e que trouxe jogos únicos, que até o presente são adorados por qualquer amante de videojogos.
+
+
+\subsection{Oitava Geração - Presente}
+\label{sub.Oitava Geraçao - Presente}
+A oitava geração começou com o lançamento da Wii U e de seguida com o lançamento da  Play Station 4 e Xbox One.
+
+\subsection{Presente - Jogos mais populares}
+\label{sub.Presente - Jogos mais populares}
+Atualmente existem inúmeras empresas de jogos que criam todos os dias novas ideias para novos jogos.
+ 
+Alguns destes jogos tornaram se extremamente populares jogados por milhões de jogadores todos os dias que e o exemplo de:
+
+ \begin{itemize}
+    \item \textbf{Minecraft} e um jogo de sobrevivência num mundo de cubos, anos após o seu lançamento começaram a aparecer modes, com o objetivo de tornar o jogo diferente e mais divertido 
+    \item \textbf{CS:Go} jogo de tiro, entre policias e terroristas. Teve o seu primeiro torneio em 2014.
+    \item \textbf{League of Legends} é um \ac{moba} que tem como objetivo trabalhar em equipa e derrotar a equipa inimiga destruindo o seu Nexus. 
+    \item \textbf{GTA V} é um jogo de história, onde o jogador tem a possibilidade de controlar com 3 amigos que atravessam imensas aventuras e obstáculos, um jogo com muita complexidade, tanto de controles como de gráficos.
+ \end{itemize}
+    
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+           & Lançamento & Developer & Numero de Jogadores (Mensalmente) \\
+\hline
+Minecraft & 2011 & Mojang & 115 Milhões \\
+\hline
+CS:GO & 2012 & Valve Corporation and Hidden Path & 24 Milhões \\
+\hline 
+League of Legends & 2009  & Riot Games & 91 Milhões\\
+\hline
+GTA V & 2013 & Rockstar Games & 3 Milhões\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\chapter*{Contribuições dos autores}
+O Bernardo Marçal redigiu a informação sobre a década de 50 (\autoref{sec.Década de 50 - O Começo}), 70 (\autoref{sec.Década de 70 - Crescimento da Indústria}) e 90 (\autoref{sec.Década de 90 - O Monópolio do Sucesso }).
+ 
+O Telmo Sauce escreveu sobre a década de 60 (\autoref{sec.Década de 60 - Tempos Revolucionários}) 80 (\autoref{sec.Década de 80- Criaçao de Icones}) e o século 21 (\autoref{sec.Seculo XXI - Evoluçao Exponecial}).
+ 
+Ambos decidiram a organização do trabalho escreveram o resumo, Introdução e bibliografia. Também decidiram em conjunto as imagens e descrições que iriam introduzir. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acrónimos}
+\begin{acronym}
+\acro{ua}[UA]{Universidade de Aveiro}
+\acro{nes}[NES]{Nintendo Entertainment System}
+\acro{rpg}[RPG]{Role-Playing Game}
+\acro{cd-rom}[CD-ROM]{Compact Disc Read-Only Memory}
+\acro{dota}[Dota]{Defense of the Ancients}
+\acro{moba}[MOBA]{Multiplayer Online Battle Arena}
+\end{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}

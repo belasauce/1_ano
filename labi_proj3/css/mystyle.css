@@ -1,0 +1,62 @@
+.title-prymary {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 5rem;
+    text-decoration: overline;
+  }
+
+input[type=file]::file-selector-button {
+    color: #fff;
+    border: 2px solid #6c757d;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #6c757d;
+    transition: 1s;
+    cursor:pointer;
+  }
+  
+input[type=file]::file-selector-button:hover {
+    color: #fff;
+    background-color: #5c636a;
+    border: 2px solid #565e64;
+}
+/*TableMixer*/
+.Tmix {
+    display: block;
+    position: relative;
+    margin-bottom: 0 px;
+    cursor: crosshair;
+    height: 45px;
+    width: 45px;
+    align-self: center;
+    font-size: 22px;
+    background-color: #000000;
+    border-radius: 10%;
+}
+.Tmix input {
+    position: absolute;
+    opacity: 0;
+    cursor: crosshair;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Tmix input:checked ~ .checkmark {
+    background-color: #ffc800;
+    height: 45px;
+    width: 45px;
+    border-radius: 10%;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+select{
+    border-width: 0px;
+    border-radius: 5%;
+    font-size: 22px;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<title>A Evolução dos Jogos Eletrónicos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+<style>
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('img/opessoa.jpeg');
+  min-height: 100%;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("img/contact.jpg");
+  min-height: 400px;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button"> HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+	<div class="w3-dropdown-hover">
+		<button onclick="myFunction()" class="dropbtn w3-button"><i class="fa fa-th"></i> HISTORIA</button>
+			<div id="w3-myDropdown" class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="decada50.60.html" class="w3-bar-item w3-button">DÉCADA 50/60</a>
+				<a href="decada70.html" class="w3-bar-item w3-button">DÉCADA 70</a>
+				<a href="decada80.html" class="w3-bar-item w3-button">DÉCADA 80</a>
+				<a href="decada90.html" class="w3-bar-item w3-button">DÉCADA 90</a>
+				<a href="seculoxxi.html" class="w3-bar-item w3-button">SÉCULO XXI</a>
+			</div>
+	</div>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="quiz.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question"></i> QUIZ</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+<!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">DECADAS</a>
+    <a href="#contact" class="w3-bbar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Acerca deste projeto</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">Sobre nós</h3>
+	<!--<p>Este site foi realiazado para um trabalho de LABI para divulgar alguma informaçao sobe um topico a nossa escolha</p>-->
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <!--<p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>-->
+      <img src="img/nos.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p class="just">Este trabalho foi realizado por <i><b>Telmo Sauce (104428)</b></i> e <i><b>Bernardo Marçal (103236)</b></i>, alunos do DETI (Departamento de Engenharia Telecomunicações e Informática) 
+      da Universidade de Aveiro (UA), com o intuito de transformar o primeiro projeto em algo mais interatico e que gerasse mais interesse para o publico em questão.<br>
+      Ambos trabalharam em conjunto para o desenvolvimento do Site. O Bernardo elaborou as "Historia" e escolheu imagens, o Telmo criou o "Quiz", o "Home" e trabalhou no design geral do site.
+      O trabalho começou a ser realizado no dia 13 de fevereiro tendo sido concluido no dia 22 de fevereiro.</p>
+    </div>
+    <!--<a href="https://code.ua.pt/projects/labi2020-ap1-g2/repository"><img src="img/codeua.png" style="position:relative; left:110px;"></a>-->	
+	 <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://code.ua.pt/projects/labi2020-ap1-g2/repository'" style="position:relative; left:180px;">Code UA</button>
+  </div>
+  
+  <div class="w3-container">
+    <h5>Cooperação</h5>
+    <p>Telmo Sauce</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-black" style="width:56.5%">56.5%</div>
+    </div>
+
+    <p>Bernardo Marçal</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-black" style="width:43.5%">43.5%</div>
+    </div>
+  </div>
+  <hr>
+  
+  
+  
+	<h3>Bibliografia</h3>
+	<ul>
+	<li><a href="https://pt.wikipedia.org/wiki/The_Legend_of_Zelda">https://pt.wikipedia.org/wiki/The_Legend_of_Zelda</a></li>
+	<li><a href="https://epicplay.com/street-fighter-o-comeco-da-maior-franquia-de-luta-dos-games/">https://epicplay.com/street-fighter-o-comeco-da-maior-franquia-de-luta-dos-games/</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Tetris">https://en.wikipedia.org/wiki/Tetris</a></li>
+	<li><a href="https://noticias.r7.com/hora-7/segredos-do-mundo/mario-bros-origem-historia-curiosidades-e-jogos-gratuitos-da-franquia-27072020">https://noticias.r7.com/hora-7/segredos-do-mundo/mario-bros-origem-historia-curiosidades-e-jogos-gratuitos-da-franquia-27072020</a></li>
+	<li><a href="https://www.nintendoblast.com.br/2014/09/donkey-kong-perfil.html">https://www.nintendoblast.com.br/2014/09/donkey-kong-perfil.html</a></li>
+	<li><a href="https://segredosdomundo.r7.com/pac-man-historia/">https://segredosdomundo.r7.com/pac-man-historia/</a></li>
+	<li><a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_dos_jogos_eletr%C3%B4nicos">https://pt.wikipedia.org/wiki/Hist%C3%B3ria_dos_jogos_eletr%C3%B4nicos</a></li>
+	<li><a href="https://www.nintendo.pt/A-empresa/Historia-da-Nintendo/Game-Boy/Game-Boy-627031.html">https://www.nintendo.pt/A-empresa/Historia-da-Nintendo/Game-Boy/Game-Boy-627031.html</a></li>
+	<li><a href="https://www.playstation.com/pt-pt/explore/ps4/playstation-through-the-years/">https://www.playstation.com/pt-pt/explore/ps4/playstation-through-the-years/</a></li>
+	<li><a href="{https://www.techtudo.com.br/noticias/noticia/2013/05/conheca-historia-do-xbox-o-revolucionario-console-da-microsoft.html}">https://www.techtudo.com.br/noticias/noticia/2013/05/conheca-historia-do-xbox-o-revolucionario-console-da-microsoft.html</a></li>
+	<li><a href="https://www.techtudo.com.br/noticias/noticia/2012/12/final-fantasy-completa-25-anos-conheca-historia-da-saga.html">https://www.techtudo.com.br/noticias/noticia/2012/12/final-fantasy-completa-25-anos-conheca-historia-da-saga.html</a></li>
+	<li><a href="https://pt.wikipedia.org/wiki/Consoles_de_jogos_eletr%C3%B4nicos_de_quinta_gera%C3%A7%C3%A3o">https://pt.wikipedia.org/wiki/Consoles_de_jogos_eletr%C3%B4nicos_de_quinta_gera%C3%A7%C3%A3o</a></li>
+	</ul>
+	
+	<h3>Webgrafia</h3>
+	<ul>
+	<li><a href="https://www.youtube.com/watch?v=J8QbjXdVl9c&t=15s&ab_channel=TheWebShala">https://www.youtube.com/watch?v=J8QbjXdVl9c&t=15s&ab_channel=TheWebShala</a></li>
+	<li><a href="https://www.w3schools.com/">https://www.w3schools.com/</a></li>
+	</ul>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Contact Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Contacte-nos!</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <!--<h3 class="w3-center">Contacte-nos!</h3>-->
+  <p class="w3-center" Style=" font-size: 20px;"><em>Caso tenha alguma duvida não hesite em contactar-nos.</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="img/ua1.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Aveiro, Portgual<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: telmobelasauce@ua.pt<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: bernardo.marcal@ua.pt<br>
+      </div>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+	Telmo Sauce:
+    <a href="https://www.facebook.com/telmo.nicolas.10/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/telmo.sauce/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/SauceTelmo"><i class="fa fa-twitter w3-hover-opacity"></i></a><br>
+    Bernardo Marçal:
+    <a href="https://www.facebook.com/bernardo.amaral.16"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/bennymarcal/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/BennyMarcal_9"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
