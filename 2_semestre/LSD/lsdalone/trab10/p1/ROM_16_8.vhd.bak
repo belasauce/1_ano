@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity ROM_16_8 is
+	port(reset	: in  std_logic;
+		  clk		: in  std_logic;
+		  inbit	: in  std_logic;
+		  outbit	: out std_logic);
+end ROM_16_8;
+
+architecture v1 of ROM_16_8 is
+
+
+				
+end v1;

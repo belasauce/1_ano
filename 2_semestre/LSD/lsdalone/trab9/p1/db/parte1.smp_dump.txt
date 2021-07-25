@@ -1,0 +1,7 @@
+
+State Machine - |SeqDetFSM|s_currentState
+Name s_currentState.S100 s_currentState.S10 s_currentState.S1 s_currentState.ini 
+s_currentState.ini 0 0 0 0 
+s_currentState.S1 0 0 1 1 
+s_currentState.S10 0 1 0 1 
+s_currentState.S100 1 0 0 1 

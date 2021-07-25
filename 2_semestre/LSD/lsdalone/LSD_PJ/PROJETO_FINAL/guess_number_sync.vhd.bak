@@ -1,0 +1,171 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity guess_number is
+	port(	clk 			: in 	std_logic;
+			keys 			: in 	std_logic_vector(3 downto 0);
+			reset 		: in 	std_logic;
+			ledr 			: out std_logic_vector(17 downto 0);
+			ledg 			: out std_logic_vector(8 downto 0);
+			activate 	: out std_logic;
+			n_attempts 	: out std_logic_vector(9 downto 0);
+			attempts 	: out std_logic_vector(9 downto 0);
+			done1			: in std_logic;--number of attempts done
+			done2			: in std_logic;--number guessed done
+			--enable 		: out std_logic_vector(2 downto 0);
+			texto 		: out std_logic_vector(2 downto 0);
+			--c1hz 			: in std_logic;
+			--c2hz 			: in std_logic;
+			--c4hz 			: in std_logic;
+			--c8hz 			: in std_logic;
+			newTime		: out std_logic;
+			timeVal		: out std_logic_vector(7 downto 0);
+			timeExp		: in  std_logic);
+end guess_number;
+
+architecture v1 of guess_number is
+
+	constant start_time			: std_logic_vector(7 downto 0) := "00001100"; -- 10 s
+
+	--States
+	type TState is (start, grupo,
+						 calc, done,
+						 hi, lo, equals,
+						 win, cheater);
+	signal s_currentState, s_nextState : TState;
+	signal s_stateChanged : std_logic := '1';
+
+	
+	--guess
+	signal lo_var 			:	integer := 0;
+	signal hi_var 			:	integer := 999;
+	signal mid_var 		:	integer ;
+	signal attempt_var 	:  integer := 0;
+	
+begin
+	sync_proc : process(clk)
+	begin
+		if (rising_edge(clk)) then
+			if (reset = '1') then
+				s_currentState <= start;
+				s_stateChanged <= '1';
+			else
+				if (s_currentState /= s_nextState) then
+					s_stateChanged <= '1';
+				else
+					s_stateChanged <= '0';
+				end if;
+				s_currentState	<= s_nextState;
+			end if;
+		end if;
+	end process;
+
+	newTime <= s_stateChanged;
+	
+	--States organizacao
+	
+	comb_proc : process(s_currentState, timeExp)
+	begin
+		
+		case (s_currentState) is
+		when start =>
+			timeVal	<= start_time;
+			s_nextState <= grupo;
+			texto <="000";
+			activate <= '0';
+
+		when grupo =>
+			texto <="001";
+			if (keys(3)='1') then--valor para o key[3]
+				s_nextState <= calc;
+				attempt_var <= 0;
+				lo_var <= 0;
+				hi_var <= 999;
+			else
+				s_nextState <= grupo;
+			end if;
+		
+		when calc =>
+				texto <="001";
+				mid_var <= (lo_var+hi_var)/2;
+				attempts <= std_logic_vector(to_unsigned(mid_var, attempts'length));
+				n_attempts <= std_logic_vector(to_unsigned(attempt_var, n_attempts'length));
+			if(hi_var<lo_var) then
+				s_nextState <= cheater;
+			else
+				s_nextState <= done;
+				activate <= '1';
+			end if;
+			
+		when done =>
+				texto <="001";
+				if(done1='1' and done2='1') then
+					s_nextState <= hi;
+					activate<='0';
+				else
+					s_nextState <= done;
+				end if;
+					
+		when hi =>
+			texto <="010";
+			if (keys(2)='1') then	--valor para o key[2]
+				s_nextState <= lo;
+			elsif (keys(1)='1') then --valor para o key[1]
+				hi_var <= mid_var-1;
+				attempt_var <= attempt_var + 1;
+				s_nextState <= calc;
+			else 
+				s_nextState <= hi;
+			end if;
+			
+		when lo =>
+			texto <="011";
+			if (keys(2)='1') then--valor para o key[2]
+				s_nextState <= equals;
+			elsif (keys(1)='1') then --valor para o key[1]
+				lo_var <= mid_var-1;
+				attempt_var <= attempt_var + 1;
+				s_nextState <= calc;
+			else
+				s_nextState <= lo;
+			end if;
+			
+		when equals =>
+			texto <="100";
+			if (keys(2)='1') then--valor para o key[2]
+				s_nextState <= hi;
+			elsif (keys(1)='1') then --valor para o key[1]
+				s_nextState <= win;
+			end if;
+			
+		when win =>
+			if (keys(0)='1') then
+				s_nextState <= grupo;
+			end if;
+			
+		when cheater =>
+			texto <="101";
+			if (keys(0)='1') then
+				s_nextState <= grupo;
+			end if;
+			
+			
+		end case;
+	end process;
+	
+		
+		with s_currentState select
+		
+			ledg <=  "100000000" when start,
+						"000000001" when grupo,
+						"000000010" when calc,
+						"000000100" when done,
+						"000001000" when hi,
+						"000010000" when lo,
+						"000100000" when equals,
+						"001000000" when win,
+						"010000000" when cheater;
+	
+				
+end v1;

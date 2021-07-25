@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri May 28 10:33:02 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : parte1
+Top-level Entity Name : ROM_Demo
+Family : Cyclone IV E
+Total logic elements : 55
+    Total combinational functions : 55
+    Dedicated logic registers : 31
+Total registers : 31
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

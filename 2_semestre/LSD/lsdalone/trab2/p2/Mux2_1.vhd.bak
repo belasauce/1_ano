@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Dec2_4En is
+	port(	sel		: in std_logic;
+			input0	: in std_logic;
+			input1	: in std_logic;
+			output	: out std_logic);
+end Dec2_4En;
+
+architecture BehavEquations of Dec2_4En is
+	process()
+	begin
+	
+end BehavEquations;

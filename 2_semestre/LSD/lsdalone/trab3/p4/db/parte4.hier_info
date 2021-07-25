@@ -1,0 +1,19 @@
+|Bin2BCD
+bindata[0] => Div0.IN7
+bindata[0] => Mod0.IN7
+bindata[1] => Div0.IN6
+bindata[1] => Mod0.IN6
+bindata[2] => Div0.IN5
+bindata[2] => Mod0.IN5
+bindata[3] => Div0.IN4
+bindata[3] => Mod0.IN4
+dec_out_1[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_1[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_1[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_1[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_h[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_h[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_h[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+dec_out_h[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+

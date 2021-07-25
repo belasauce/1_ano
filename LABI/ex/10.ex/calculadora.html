@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script type="text/javascript" src="calculadora.js"></script>
+    </head>
+    <body>
+        <input id="op1" value="2" />
+        <span type="text"id="op-view">+</span>
+        <input id="op2" value="3" />
+        <input type="text" id="res" value="" /><br/>
+        
+        <select onchange="operacao(this)">
+            <option value="+"> Soma </option>
+            <option value="-"> Subtração </option>
+            <option value="/"> Divisão </option>
+            <option value="*"> Multiplicação </option>
+        </select>
+        
+        <button onclick="calcular();">Calcular</button>
+    </body>
+</html>

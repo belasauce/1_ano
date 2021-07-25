@@ -1,0 +1,11 @@
+library IEEE;
+use.STD_LOGIC.1164.all;
+
+entity FlipFlopD_Demo is
+	port();
+end FlipFlopD_Demo;
+
+architecture v1 of FlipFlopD_Demo is 
+begin
+	f : entity work.FlipFlop()
+end v1;

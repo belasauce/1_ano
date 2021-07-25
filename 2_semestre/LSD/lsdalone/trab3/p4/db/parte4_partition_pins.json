@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dec_out_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_out_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_out_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_out_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_out_h[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bindata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bindata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bindata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bindata[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

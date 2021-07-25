@@ -1,0 +1,182 @@
+$comment
+	File created using the following command:
+		vcd file parte4.msim.vcd -direction
+$end
+$date
+	Wed Apr 21 18:56:08 2021
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module penc4_2_vhd_vec_tst $end
+$var wire 1 ! decodedin [3] $end
+$var wire 1 " decodedin [2] $end
+$var wire 1 # decodedin [1] $end
+$var wire 1 $ decodedin [0] $end
+$var wire 1 % encodedout [1] $end
+$var wire 1 & encodedout [0] $end
+$var wire 1 ' validout $end
+
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var wire 1 + devoe $end
+$var wire 1 , devclrn $end
+$var wire 1 - devpor $end
+$var wire 1 . ww_devoe $end
+$var wire 1 / ww_devclrn $end
+$var wire 1 0 ww_devpor $end
+$var wire 1 1 ww_decodedin [3] $end
+$var wire 1 2 ww_decodedin [2] $end
+$var wire 1 3 ww_decodedin [1] $end
+$var wire 1 4 ww_decodedin [0] $end
+$var wire 1 5 ww_encodedout [1] $end
+$var wire 1 6 ww_encodedout [0] $end
+$var wire 1 7 ww_validout $end
+$var wire 1 8 \encodedout[0]~output_o\ $end
+$var wire 1 9 \encodedout[1]~output_o\ $end
+$var wire 1 : \validout~output_o\ $end
+$var wire 1 ; \decodedin[1]~input_o\ $end
+$var wire 1 < \decodedin[2]~input_o\ $end
+$var wire 1 = \decodedin[0]~input_o\ $end
+$var wire 1 > \encodedout~0_combout\ $end
+$var wire 1 ? \Equal0~0_combout\ $end
+$var wire 1 @ \decodedin[3]~input_o\ $end
+$var wire 1 A \Equal0~1_combout\ $end
+$var wire 1 B \ALT_INV_Equal0~1_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1'
+0(
+1)
+x*
+1+
+1,
+1-
+1.
+1/
+10
+17
+08
+09
+1:
+0;
+0<
+1=
+0>
+0?
+1@
+0A
+1B
+1!
+0"
+0#
+1$
+11
+02
+03
+14
+05
+06
+0%
+0&
+$end
+#100000
+1#
+13
+1;
+#200000
+0#
+03
+0;
+#300000
+0$
+04
+0=
+1>
+1?
+19
+18
+15
+16
+1&
+1%
+#400000
+1"
+12
+1<
+0>
+08
+06
+0&
+#500000
+0"
+1$
+0!
+14
+02
+01
+0@
+0<
+1=
+0?
+09
+05
+0%
+#600000
+1!
+1#
+13
+11
+1@
+1;
+#700000
+0#
+0$
+04
+03
+0;
+0=
+1>
+1?
+19
+18
+15
+16
+1&
+1%
+#800000
+1$
+14
+1=
+0>
+0?
+09
+08
+05
+06
+0&
+0%
+#900000
+0$
+1#
+0!
+04
+13
+01
+0@
+1;
+0=
+1>
+18
+16
+1&
+#1000000

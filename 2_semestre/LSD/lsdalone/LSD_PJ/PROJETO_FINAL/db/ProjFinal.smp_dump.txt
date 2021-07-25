@@ -1,0 +1,27 @@
+
+State Machine - |ProjFinal_demo|bin_to_bcd_fsm:bcd_fsm_2|s_state
+Name s_state.finish s_state.sub10 s_state.sub100 s_state.idle 
+s_state.idle 0 0 0 0 
+s_state.sub100 0 0 1 1 
+s_state.sub10 0 1 0 1 
+s_state.finish 1 0 0 1 
+
+State Machine - |ProjFinal_demo|bin_to_bcd_fsm:bcd_fsm_1|s_state
+Name s_state.finish s_state.sub10 s_state.sub100 s_state.idle 
+s_state.idle 0 0 0 0 
+s_state.sub100 0 0 1 1 
+s_state.sub10 0 1 0 1 
+s_state.finish 1 0 0 1 
+
+State Machine - |ProjFinal_demo|guess_number_sync:main_fsm|s_State
+Name s_State.cheater s_State.win s_State.equals s_State.lo s_State.hi s_State.done s_State.calc_mid s_State.calc s_State.grupo s_State.start 
+s_State.start 0 0 0 0 0 0 0 0 0 0 
+s_State.grupo 0 0 0 0 0 0 0 0 1 1 
+s_State.calc 0 0 0 0 0 0 0 1 0 1 
+s_State.calc_mid 0 0 0 0 0 0 1 0 0 1 
+s_State.done 0 0 0 0 0 1 0 0 0 1 
+s_State.hi 0 0 0 0 1 0 0 0 0 1 
+s_State.lo 0 0 0 1 0 0 0 0 0 1 
+s_State.equals 0 0 1 0 0 0 0 0 0 1 
+s_State.win 0 1 0 0 0 0 0 0 0 1 
+s_State.cheater 1 0 0 0 0 0 0 0 0 1 

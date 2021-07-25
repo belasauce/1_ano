@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity display_selector is
+	port(	clk 			: in 	std_logic;
+			keys 			: in 	std_logic_vector(3 downto 0);
+			reset 		: in 	std_logic;
+			ledr 			: out std_logic_vector(17 downto 0);
+			activate 	: in std_logic;
+			n_attempts 	: out std_logic_vector(6 downto 0);
+			attempts 	: out std_logic_vector(9 downto 0);
+			done1			: in std_logic;
+			done2			: in std_logic;
+			selector 	: out std_logic;
+			enable 		: out std_logic;--tem de ter mais bits
+			texto 		: out std_logic;--tem de ter mais bits
+			c1hz 			: in std_logic;
+			c2hz 			: in std_logic;
+			c4hz 			: in std_logic;
+			c8hz 			: in std_logic);
+end display_selector;
+
+architecture v1 of display_selector is
+begin
+				
+end v1;

@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity bin_to_bcd_fsm is
+	port ( -- bin_input = 100 * digit2 + 10 * digit1 + digit0
+			bin_input 	: in std_logic_vector(9 downto 0);
+			activate 	: in std_logic;
+			digit2 		: out std_logic_vector(3 downto 0);
+			digit1 		: out std_logic_vector(3 downto 0);
+			digit0 		: out std_logic_vector(3 downto 0);
+			done 			: out std_logic);
+end bin_to_bcd_fsm;

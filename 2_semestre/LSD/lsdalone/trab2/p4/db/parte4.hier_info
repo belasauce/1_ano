@@ -1,0 +1,15 @@
+|PEnc4_2
+decodedin[0] => encodedout.OUTPUTSELECT
+decodedin[0] => encodedout.OUTPUTSELECT
+decodedin[0] => Equal0.IN3
+decodedin[1] => encodedout.OUTPUTSELECT
+decodedin[1] => encodedout.DATAA
+decodedin[1] => Equal0.IN2
+decodedin[2] => encodedout.DATAA
+decodedin[2] => Equal0.IN1
+decodedin[3] => Equal0.IN0
+encodedout[0] << encodedout.DB_MAX_OUTPUT_PORT_TYPE
+encodedout[1] << encodedout.DB_MAX_OUTPUT_PORT_TYPE
+validout << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

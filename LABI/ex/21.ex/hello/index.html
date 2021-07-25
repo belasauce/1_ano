@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LABI</title>
+
+<!-- CSS starts here -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/ratchet.css">
+<link rel="stylesheet" href="css/ratchet-theme-android.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<link rel="stylesheet" href="css/map.css">
+
+
+
+
+<!-- Javascript starts here -->
+<script src="js/jquery.js"></script>
+<script src="js/ratchet.js"></script>
+<script src="js/location.js"></script>
+<script src="js/jquery.js"></script>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+</head>
+
+<body>
+	<header class="bar bar-nav">
+		<h1 class="title">LABI</h1>
+	</header>
+	<div class="bar bar-footer"></div>
+	<div class="content">
+		<ul class="table-view">
+			<li class="table-view-cell">Waiting for location</li>
+		</ul>	
+	</div>
+	<!--ex 21.4-->
+	<div class="content">
+		<ul class="table-view">
+			<li class="table-cell">
+				<div id="location"></div>
+			</li>
+			<li class="table-cell">
+				<div id="mapid">Map loading..</div>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
