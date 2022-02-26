@@ -4,7 +4,6 @@ import sqlite3
 import json
 import wave
 import numpy
-import pyaudio
 from struct import pack
 from math import sin, pi
 
